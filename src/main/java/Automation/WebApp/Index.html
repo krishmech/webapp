@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="Stylesheet" href="Index.css">
+	<title>Login Page</title>
+	<style>
+		.err{display:none;}
+	</style>
+</head>
+<body>
+	<div class="login">
+		<h2>Login</h2>
+		<form method="post" action="authenticate.php">
+			<label>Email:</label>
+			<input type="email" name="username" required>
+			<div class="err">Wrong username</div>
+			<label>Password:</label>
+			<input type="password" name="password" required>
+			<div class="err">Wrong password</div>
+			<div id="error-msg"></div>
+			<input type="submit" value="Login">
+			<a href="#">forgot password</a>
+		</form>
+	</div>
+	<script>
+		function myfunction(){
+		document.getElementsByClassName("err").setAttribute("style","display:block;");}
+	</script>
+</body>
+</html>
